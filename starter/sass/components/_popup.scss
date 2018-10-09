@@ -22,6 +22,13 @@
     opacity: 0;
     transform: translate(-50%, -50%) scale(.25);
     transition: all .5s .2s;
+
+    @include respond(tab-port) {
+      width: 85%;
+      // position: relative;
+      height: 50rem;
+      display: block
+    }
   }
 
   &__left {
@@ -29,6 +36,12 @@
     display: table-cell;
     position: relative;
     overflow: hidden;
+
+    @include respond(tab-port) {
+      display: block;
+      width: 100%;
+      // vertical-align: top;
+    }
   }
 
   &__right {
@@ -36,6 +49,11 @@
     display: table-cell;
     vertical-align: middle;
     padding: 3rem 5rem;
+
+    @include respond(tab-port) {
+      display: block;
+      width: 100%;
+    }
   }
 
   &__img {
@@ -48,8 +66,26 @@
     height: 50%;
     transform: translateX(-50%);
 
+    @include respond(tab-port) {
+      left: 0;
+      height: 50%;
+      transform: translateX(0);
+      // position: absolute;
+      top: 0;
+      width: 15rem;
+      height: 100%;
+    }
+
     &--1 {
       bottom: 50%;
+      
+      @include respond(tab-port) {
+        bottom: 0;
+        top:0;
+        left: 0;
+        // height: 100vh;
+        position: absolute;
+      }
     }
 
     &--2 {
