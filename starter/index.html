@@ -351,7 +351,15 @@
 
     <footer class="footer">
         <div class="footer__logo-box">
-            <img src="img/logo-green-2x.png" alt="Full logo" class="footer__logo">
+
+            <!-- Art Direction resposive images (different images for different viewport width) with density switching -->
+            <picture class="footer_logo">
+                <source srcset="img/logo-green-small-1x.png 1x, img/logo-green-small-2x.png 2x" 
+                        media="(max-width: 37.5em)">
+                <img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" alt="Full logo">
+            </picture>
+            <!-- Density Switching responsive images -->
+            <!-- <img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" alt="Full logo" class="footer__logo">  -->
         </div>
         <div class="row">
             <div class="col-1-of-2">
